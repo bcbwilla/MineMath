@@ -1,0 +1,18 @@
+main: net.electronexchange.minemath.MineMath
+name: MineMath
+version: 1.0
+author: bcbwilla
+description: Math stuff
+commands:
+    calc:
+        description: does basic arithmetic
+        useage: /calc <expression>
+    integrate:
+        description: approximates integral between lower and upper limit
+        useage: /integrate <function> <variable> <lower limit> <upper limit>
+    derivative:
+        description: approximates function at a given position
+        useage: /derivative <function> <variable> <position>
+    math:
+        description: integrates
+        useage: /<command>
