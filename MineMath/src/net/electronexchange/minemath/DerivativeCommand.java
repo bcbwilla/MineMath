@@ -22,9 +22,11 @@ public class DerivativeCommand implements CommandExecutor {
 			sender.sendMessage("Derivative of what?");
 			return false;
 		} else {
-			final Expr expr;						
+			final Expr expr;	
+			final Expr posExpr;
 			try {
 			    expr = Parser.parse(args[0]); 
+			    posExpr = Parser.parse(args[2]); 
 			} catch (SyntaxException e) {
 				sender.sendMessage(String.valueOf(e.explain()));
 			    return true;
@@ -38,10 +40,10 @@ public class DerivativeCommand implements CommandExecutor {
 					return expr.value();
 				}
 			};		
-			final double pos = Double.valueOf(args[2]);
+			final double pos = posExpr.value();
 		
 			FivePointStencil derivative = new FivePointStencil(func);
-			String outString = "Derivative of "+args[0]+" a "+pos+":";
+			String outString = "Derivative of "+args[0]+" at "+pos+":";
 			String answer = String.valueOf(derivative.derivative(pos));
 			sender.sendMessage(outString);
 			sender.sendMessage(answer);

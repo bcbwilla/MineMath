@@ -23,9 +23,13 @@ public class IntegrateCommand implements CommandExecutor {
 			sender.sendMessage("Integrate what?");
 			return false;
 		} else {
-			final Expr expr;						
+			final Expr expr;
+			final Expr lowerLimitExpr;
+			final Expr upperLimitExpr;
 			try {
 			    expr = Parser.parse(args[0]); 
+				lowerLimitExpr = Parser.parse(args[2]);
+				upperLimitExpr = Parser.parse(args[3]);
 			} catch (SyntaxException e) {
 				sender.sendMessage(String.valueOf(e.explain()));
 			    return true;
@@ -39,8 +43,8 @@ public class IntegrateCommand implements CommandExecutor {
 					return expr.value();
 				}
 			};		
-			final double lowerLimit = Double.valueOf(args[2]);
-			final double upperLimit = Double.valueOf(args[3]);
+			final double lowerLimit = lowerLimitExpr.value();
+			final double upperLimit = upperLimitExpr.value();
 			final int stepSize = 10000;
 			
 			SimpsonsIntegrator integral = new SimpsonsIntegrator(integrand);
