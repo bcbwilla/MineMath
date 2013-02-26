@@ -6,11 +6,8 @@ import org.bukkit.command.CommandSender;
 
 public class MathCommand implements CommandExecutor {	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){						
-		if(cmd.getName().equalsIgnoreCase("math")){
-			sender.sendMessage("math");
-			return true;		
-		}
-		return false; 
+		sender.sendMessage("is pretty neat");
+		return true;
 	}
 }
 

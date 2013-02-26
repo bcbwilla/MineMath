@@ -8,5 +8,6 @@ public class MineMath extends JavaPlugin {
 		getCommand("math").setExecutor(new MathCommand());
 		getCommand("integrate").setExecutor(new IntegrateCommand());
 		getCommand("derivative").setExecutor(new DerivativeCommand());
+		getCommand("setvar").setExecutor(new SetVarCommand());
 	}
 }

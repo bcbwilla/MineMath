@@ -24,8 +24,12 @@ public class CalcCommand implements CommandExecutor {
 			} catch (SyntaxException e) {
 			    sender.sendMessage(String.valueOf(e.explain()));
 			    return true;
-			}			
-		    sender.sendMessage(String.valueOf(args[0])+" = "+String.valueOf(expr.value()));
+			}
+			String answer = String.valueOf(expr.value());
+			if(answer.equalsIgnoreCase("infinity")||answer.equalsIgnoreCase("-infinity")){
+				answer = "NaN";
+			}
+		    sender.sendMessage(String.valueOf(args[0])+" = "+answer);
 		    return true;			 
 		}
 		return false; 
