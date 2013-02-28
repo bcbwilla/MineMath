@@ -24,7 +24,7 @@ public class VariableCommand implements CommandExecutor {
 	}
 		
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){					
-		if(args.length != 2){			
+		if(args.length != 3){			
 			Map<String, Object> commandInfo = plugin.getDescription().getCommands().get("variable");
 			String description = (String) commandInfo.get("description");
 			sender.sendMessage(ChatColor.BLUE + "Description:");
