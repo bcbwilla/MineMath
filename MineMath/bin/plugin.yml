@@ -1,21 +1,27 @@
 main: net.electronexchange.minemath.MineMath
 name: MineMath
-version: 1.0
+version: 1.0.0
 author: bcbwilla
-description: Math stuff
+website: electronexchange.net
+description: MineMath provides basic math functionality (pun intended) from the chat terminal.
 commands:
-    calc:
+    calculate:
         description: does basic arithmetic
-        useage: /<command> [expression]
+        usage: /<command> [expression]
+        aliases: calc
     integrate:
-        description: approximates integral between lower and upper limit
-        useage: /<command> [function] [variable] [lower limit] [upper limit]
+        description: approximates integral of function integrated from lower to upper limit
+        usage: /<command> [function] [variable] [lower limit] [upper limit]
+        aliases: int
     derivative:
-        description: approximates function at a given position
-        useage: /<derivative> [function] [variable] [position]
-    math:
-        description: just a test command
-        useage: /<command>
-    setvar:
-        description: sets the value of a variable.  if the variable is new, it creates it.
-        useage: /<command> [variable] [value]
+        description: approximates derivative of a function at a given position
+        usage: /<command> [function] [variable] [position]
+        aliases: der
+    minemath:
+        description: info
+        useage: /<command> [option]
+        aliases: mm
+    variable:
+        description: sets of prints the value of a variable
+        usage: /<command> set [variable] [value] or /<command> echo [variable]
+        aliases: var

@@ -1,7 +1,12 @@
-package net.electronexchange.minemath;
+package net.electronexchange.minemath.commands;
 
 
 
+import java.util.Map;
+
+import net.electronexchange.minemath.MineMath;
+
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,11 +16,22 @@ import expr.expr.Parser;
 import expr.expr.SyntaxException;
 
 
-public class CalcCommand implements CommandExecutor {
+
+public class CalculateCommand implements CommandExecutor {
+	
+	private MineMath plugin;
+	 
+	public CalculateCommand(MineMath plugin) {
+		this.plugin = plugin;
+	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){					
 		if(args.length == 0){
-			sender.sendMessage("Calculate what?");
+			Map<String, Object> commandInfo = plugin.getDescription().getCommands().get("calculate");
+			String description = (String) commandInfo.get("description");
+			sender.sendMessage(ChatColor.BLUE + "Description:");
+			sender.sendMessage(description);
+			sender.sendMessage(ChatColor.BLUE + "Usage:");
 			return false;
 		} else if(args.length >= 1){
 			Expr expr;
