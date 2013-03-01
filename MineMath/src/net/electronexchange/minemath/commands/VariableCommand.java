@@ -1,11 +1,8 @@
 package net.electronexchange.minemath.commands;
 
 
-import java.util.Map;
+import net.electronexchange.minemath.util.MMUtil;
 
-import net.electronexchange.minemath.MineMath;
-
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,19 +14,9 @@ import expr.expr.Variable;
 
 public class VariableCommand implements CommandExecutor {
 	
-	private MineMath plugin;
-	 
-	public VariableCommand(MineMath plugin) {
-		this.plugin = plugin;
-	}
-		
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){					
-		if(args.length != 3){			
-			Map<String, Object> commandInfo = plugin.getDescription().getCommands().get("variable");
-			String description = (String) commandInfo.get("description");
-			sender.sendMessage(ChatColor.BLUE + "Description:");
-			sender.sendMessage(description);
-			sender.sendMessage(ChatColor.BLUE + "Usage:");
+		if(args.length < 2 || args.length > 3){			
+			MMUtil.commandHelp("variable", cmd, sender);
 			return false;
 		} else if(args[1].equalsIgnoreCase("pi")){
 				sender.sendMessage("You want to redifine pi? Are you CRAZY?!? No! Nope.avi");

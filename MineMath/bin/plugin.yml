@@ -21,7 +21,16 @@ commands:
         description: info
         useage: /<command> [option]
         aliases: mm
+    coinflip:
+        description: heads or tails!
+        usage: /<command>
+        aliases: flip
+    rolldice:
+        description: rolls a dice with n sides
+        usage: /<command> [n]
+        aliases: roll
     variable:
         description: sets of prints the value of a variable
         usage: /<command> set [variable] [value] or /<command> echo [variable]
         aliases: var
+        

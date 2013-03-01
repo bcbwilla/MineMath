@@ -16,11 +16,11 @@ Usage:
 /calc [expression]
 
 Examples:
-	/calc (2+8)/5
-	(2+8)/5 = 2.0
+/calc (2+8)/5
+(2+8)/5 = 2.0
 
-	/calc sin(pi/2)^2
-	cos(pi)^2 = 1.0
+/calc sin(pi/2)^2
+cos(pi)^2 = 1.0
 
 Numerical Derivatives - "/derivative"
 -------------------------------------
@@ -30,9 +30,9 @@ Usage:
 /derivative [function] [variable] [point]
 
 Example:
-	/derivative sin(x) x 0
-	Derivative of sin(x) at 0:
-	1.0
+/derivative sin(x) x 0
+Derivative of sin(x) at 0:
+1.0
 
 
 Other Stuff
