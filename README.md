@@ -4,7 +4,7 @@ MineMath
 (Minecraft*Math)/craft
 
 This bukkit plugin adds some basic chat command mathematics capabilities
-to Minecraft.
+to Minecraft.  Hurray!
 
 Using MineMath
 ==============
