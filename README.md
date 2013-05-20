@@ -15,35 +15,35 @@ Do arithmetic using the command "/calc".
 Usage:
 /calc [expression]
 
-Examples:
-/calc (2+8)/5
+Examples:  
+/calc (2+8)/5  
 (2+8)/5 = 2.0
 
-/calc sin(pi/2)^2
+/calc sin(pi/2)^2  
 cos(pi)^2 = 1.0
 
 Numerical Derivatives - "/derivative"
 -------------------------------------
 Differentiate a function at a point
 
-Usage:
+Usage:  
 /derivative [function] [variable] [point]
 
 Example:
-/derivative sin(x) x 0
-Derivative of sin(x) at 0:
+/derivative sin(x) x 0  
+Derivative of sin(x) at 0:  
 1.0
 
 Numerical Integration - "/integrate"
 ------------------------------------
 Differentiate a function at a point
 
-Usage:
+Usage:  
 /derivative [function] [variable] [point]
 
-Example:
-/integrate 3*x^2 x 0 1
-Integral of 2*x^2 from 0.0 to 1.0:
+Example:  
+/integrate 3*x^2 x 0 1  
+Integral of 2*x^2 from 0.0 to 1.0:  
 1.0000000000000004
 
 (note the tiny amount of numerical noise at the end)
