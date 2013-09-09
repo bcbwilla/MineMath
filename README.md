@@ -3,14 +3,13 @@ MineMath
 
 (Minecraft*Math)/craft
 
-This bukkit plugin adds some basic chat command mathematics capabilities
-to Minecraft.  Hurray!
+This bukkit plugin adds some basic chat command mathematics capabilities to Minecraft.  Hurray!
 
 Using MineMath
 ==============
 Basic Calculations - "/calc"
 ----------------------------------------
-Do arithmetic using the command "/calc".
+Do basic arithmetic.
 
 Usage:
 /calc [expression]
@@ -24,7 +23,7 @@ cos(pi)^2 = 1.0
 
 Numerical Derivatives - "/derivative"
 -------------------------------------
-Differentiate a function at a point
+Differentiate a function at a point.
 
 Usage:  
 /derivative [function] [variable] [point]
@@ -36,10 +35,10 @@ Derivative of sin(x) at 0:
 
 Numerical Integration - "/integrate"
 ------------------------------------
-Differentiate a function at a point
+Integrate a function in an interval.
 
 Usage:  
-/derivative [function] [variable] [point]
+/integrate [function] [variable] [start] [end]
 
 Example:  
 /integrate 3*x^2 x 0 1  
@@ -51,8 +50,6 @@ Integral of 2*x^2 from 0.0 to 1.0:
 Other Stuff
 ===========
 
-The plugin uses [expr](https://github.com/darius/expr) to parse the
-math input.
+The plugin uses [expr](https://github.com/darius/expr) to parse the math input.
 
-Many of the numerical classes are based on examples in the great book
-[Java Number Cruncher](http://www.apropos-logic.com/nc/) by Ronald Mak.
+Many of the numerical classes are based on examples in the great book [Java Number Cruncher](http://www.apropos-logic.com/nc/) by Ronald Mak.

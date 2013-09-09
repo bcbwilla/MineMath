@@ -19,4 +19,9 @@ public class MMUtil {
 		}
 		sender.sendMessage(ChatColor.BLUE + "Usage:");
 	}
+	
+	public static String userVariableName(String username, String variable){
+		final String RAND = "_623894723_";
+		return username + RAND + variable;
+	}
 }

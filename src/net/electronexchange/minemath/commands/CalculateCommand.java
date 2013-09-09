@@ -33,7 +33,7 @@ public class CalculateCommand implements CommandExecutor {
 		}
 		String answer = String.valueOf(expr.value());
 		//ad hoc catch of the inaccurate IEEE 754 division by zero response.  1/0 is NOT infinity!
-		if(answer.equalsIgnoreCase("infinity")||answer.equalsIgnoreCase("-infinity")){
+		if(answer.equalsIgnoreCase("infinity") || answer.equalsIgnoreCase("-infinity")){
 			answer = "NaN";
 		}
 	    sender.sendMessage(String.valueOf(mathExpression)+" = "+answer);

@@ -21,7 +21,7 @@ public class RandomCommand implements CommandExecutor{
 				return true;
 			}
 		}else if (cmd.getName().equalsIgnoreCase("rolldie")){
-			if(args.length == 0 || args.length > 1){
+			if(args.length != 1){
 				MMUtil.commandHelp("rolldie", cmd, sender);
 				return false;
 			}else{
